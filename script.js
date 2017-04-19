@@ -43,9 +43,9 @@ var groceryList = [
   },
   ];
 groceryList.forEach(function(i) {
-  if (groceryList.price === 0) {
-    subtotal = i.price * 0.006;
-  }
+  // if (groceryList.price === 0) {
+  //   subtotal = i.price * 0.006;
+  // }
   console.log(i.name);
   console.log(i.price);
   total += i.price;
