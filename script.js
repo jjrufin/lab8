@@ -1,4 +1,12 @@
-var subtotal = 0;
+var newElement = document.createElement("div");
+newElement.style.backgroundColor="blue";
+newElement.style.height="800px";
+newElement.style.width="600px";
+
+
+document.body.appendChild(newElement);
+
+
 var total = 0;
 var groceryList = [
   {
@@ -42,24 +50,28 @@ var groceryList = [
     price: 9.97
   },
   ];
-groceryList.forEach(function(i) {
-  // if (groceryList.price === 0) {
-  //   subtotal = i.price * 0.006;
-  // }
-  console.log(i.name);
-  console.log(i.price);
-  total += i.price;
+groceryList.forEach(function(item) {
+  // console.log(i.name + i.price);
+  var itemName = document.createElement("p");
+  itemName.innerText = item.name;
+  var itemPrice = document.createElement("p");
+  itemPrice.innerText = item.price;
+  newElement.appendChild(itemName);
+  newElement.appendChild(itemPrice);
+  total += item.price;
+
+  return total;
 });
 
 
 console.log("Total is " +total.toFixed(2));
 
-
-
-var title = document.createElement("H2");
-
-var list = document.createElement("p");
-title.innerText = "This is my grocery list";
-
-document.body.appendChild(title);
-document.body.appendChild(list)
+//
+//
+// var newElement = document.createElement("H2");
+//
+// var list = document.createElement("p");
+// title.innerText = "This is my grocery list";
+//
+// document.body.appendChild(title);
+// document.body.appendChild(list)
