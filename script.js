@@ -1,7 +1,5 @@
 var newElement = document.createElement("div");
-newElement.style.backgroundColor="blue";
-newElement.style.height="800px";
-newElement.style.width="600px";
+
 
 
 document.body.appendChild(newElement);
@@ -58,10 +56,15 @@ groceryList.forEach(function(item) {
   itemPrice.innerText = item.price;
   newElement.appendChild(itemName);
   newElement.appendChild(itemPrice);
+
   total += item.price;
 
-  return total;
+
 });
 
+
+var totalPrice = document.createElement('p');
+totalPrice.innerText = total.toFixed(2);
+newElement.appendChild(totalPrice);
 
 console.log("Total is " +total.toFixed(2));
