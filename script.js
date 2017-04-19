@@ -51,4 +51,15 @@ groceryList.forEach(function(i) {
   total += i.price;
 });
 
+
 console.log("Total is " +total.toFixed(2));
+
+
+
+var title = document.createElement("H2");
+
+var list = document.createElement("p");
+title.innerText = "This is my grocery list";
+
+document.body.appendChild(title);
+document.body.appendChild(list)
