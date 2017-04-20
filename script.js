@@ -1,9 +1,11 @@
 var newElement = document.createElement("div");
-
+var newElement2 = document.createElement("div");
 
 
 document.body.appendChild(newElement);
-
+document.body.appendChild(newElement2);
+newElement.className = "div1";
+newElement2.className = "div2";
 
 var total = 0;
 var groceryList = [
@@ -55,9 +57,18 @@ groceryList.forEach(function(item) {
   var itemPrice = document.createElement("p");
   itemPrice.innerText = item.price;
   newElement.appendChild(itemName);
-  newElement.appendChild(itemPrice);
+  newElement2.appendChild(itemPrice);
 
   total += item.price;
+
+  // function addItem (){
+  //   document.getElementById('newitem').value +=
+  //
+  // }
+  // function addPrice() {
+  //   document.getElementById('newPrice').value
+  //
+  // }
 
 
 });
@@ -65,6 +76,10 @@ groceryList.forEach(function(item) {
 
 var totalPrice = document.createElement('p');
 totalPrice.innerText = total.toFixed(2);
-newElement.appendChild(totalPrice);
+newElement2.appendChild(totalPrice);
 
-console.log("Total is " +total.toFixed(2));
+
+
+
+
+// console.log("Total is " +total.toFixed(2));

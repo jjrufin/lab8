@@ -1,0 +1,25 @@
+body{
+  background-color: #FFFFA5;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.div1 {
+
+  float:left;
+  width: 50%;
+  text-align:center;
+  overflow: hidden;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.div2 {
+  text-align: center;
+  vertical-align: top;
+  font-family: 'Permanent Marker', cursive;
+
+}
